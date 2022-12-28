@@ -6,6 +6,12 @@ const bodyParser = require('body-parser')
 
 const connection = require('./database/database')
 
+const categoriesController = require('./categories/CategoriesController')
+const articlesController = require('./articles/ArticlesController')
+
+const Article = require('./articles/Article.js')
+const Category = require('./categories/Category')
+
 //view engine - config padroes html
 app.set('view engine', 'ejs')
 
@@ -26,12 +32,24 @@ connection
         console.log(error)
     })
 
-
+/*
 
 app.get('/', (req, res) =>{
     //res.send('Bem vindo')
     res.render('index')
 })
+
+*/
+//importa rota de categoriesController
+app.use('/', categoriesController)
+
+app.use('/', articlesController)
+
+
+
+
+
+
 
 
 
