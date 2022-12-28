@@ -32,14 +32,13 @@ connection
         console.log(error)
     })
 
-/*
 
 app.get('/', (req, res) =>{
     //res.send('Bem vindo')
     res.render('index')
 })
 
-*/
+
 //importa rota de categoriesController
 app.use('/', categoriesController)
 
