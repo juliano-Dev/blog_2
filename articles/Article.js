@@ -17,7 +17,7 @@ const Article = connection.define('articles',{
 
 //um artigo pertence a uma categoria
 //relacionamento 1 p/ 1 (tabelas no banco)
-// --->>> Article.belongsTo(Category) <---
+Article.belongsTo(Category)
 
 //uma categoria tem varios artigos
 //relacionamento 1 p/ n (tabelas no banco)
